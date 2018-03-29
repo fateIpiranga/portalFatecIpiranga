@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fatec Ipiranga</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/portifolio.css">
+
+  	<script lang=”javascript”>
+		  $(document).ready(function () {
+			  $.ajax({
+				  url: 'teste/retornaDetalheConteudo.json',
+				  data: {
+					  conteudo: '1234'
+				  },
+				  error: function (e, b, error) {
+					  console.log(e.respone);
+				  },
+				  success: function (msg) {
+					  console.log(msg);
+					  $('#titulo').text(msg.titulo);
+					  $('#corpo').text(msg.texto);
+					  $('#date').text(msg.data);
+					  $('#item1').text(msg.detalhe.item1);
+					  $('#item2').text(msg.detalhe.item2);
+					  $('#item3').text(msg.detalhe.item3);
+					  $('#item4').text(msg.detalhe.item4);
+				  }
+			  });
+		  });
+
+  	</script>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+      <nav class="fixed-top navbar-expand-lg fixed-topn navbar-dark navbar-cabecalho">
+          <div class="menu-main">
+              <div class="container">
+                  <div class="row align-items-center">
+                      <div class="col-3 col-sm-3 col-md-3 col-lg-2  cabecalho-item">
+                          <h1><a href="index.html"><img class="logo" src="img/logoFatecIpiranga.png" alt="Fatec Ipiranga"></a></h1>
+                      </div>
+                      <div class=" col-lg-4 cabecalho-item cabecalho-item-busca">
+                          <div class="input-group collapse navbar-collapse" id="inputResponsive">
+                              <input type="text" class="form-control  input-pesquisar" placeholder="Search for...">
+                              <span class="input-group-btn  ">
+                                  <button class="btn btn-pesquisar" type="button"></button>
+                              </span>
+                          </div>
+                      </div>
+
+                      <div class="col-3 col-sm-3 col-md-3 col-lg-2  cabecalho-item cabecalho-item-cps">
+                          <h2><a href="http://www.cps.sp.gov.br/" target="_blank"><img class="logo-cps" src="img/logoCpsBranco.png" alt="Centro Paula Souza"></a></h2>
+                      </div>
+                      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="row align-items-center menu-suspenso">
+              <div class="container">
+
+                  <div class="collapse navbar-collapse" id="navbarResponsive">
+                      <ul class="navbar-nav menu-lista js-menu">
+                          <li class="nav-item  itens-nav">
+                              <div class="cabecalho-item dropdown-item-busca">
+                                  <div class="input-group" id="inputResponsive">
+                                      <input type="text" class="form-control  input-pesquisar" placeholder="Search for...">
+                                      <span class="input-group-btn  ">
+                                          <button class="btn btn-pesquisar" type="button"></button>
+                                      </span>
+                                  </div>
+                              </div>
+                          </li>
+
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </nav>
+
+    <!-- Page Content -->
+    <div class="container  conteudo">
+
+      <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3">
+        <small></small>
+      </h1>
+
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Notícias</li>
+      </ol>
+
+      <!-- Portfolio Item Row -->
+      <div class="row">
+
+        <div class="col-md-8">
+          <img class="img-fluid" src="/img/slide1.jpg" width="750px" height="500px" alt="">
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="my-3" id="titulo">Project Description</h3>
+          <p  id="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+          <h3 class="my-3" >Project Details</h3>
+          <ul class="project-list">
+            <li id="item1">Lorem Ipsum</li>
+            <li id="item2">Dolor Sit Amet</li>
+            <li id="item3">Consectetur</li>
+            <li id="item4">Adipiscing Elit</li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+      <!-- Related Projects Row -->
+      <h3 class="my-4">Related Projects</h3>
+
+      <div class="row">
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          </a>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5  rodape">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/carregarMenuPrincipal.js"></script>
+    <script src="js/mostrarMenuPrincipal.js"></script>
+
+  </body>
+
+</html>

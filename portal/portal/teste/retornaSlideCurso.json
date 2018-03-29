@@ -1,0 +1,24 @@
+[
+  {
+    "codigoSlide": "1",
+    "imagem": "slide1.jpg",
+    "titulo": "ADS Nota Maxima",
+    "mensagem": "ADS Nota Maxima",
+    "urlRedireciona": "http://fatecig.norton.net.br/slide1.html"
+  },
+  {
+    "codigoSlide": "2",
+    "imagem": "slide2.jpg",
+    "titulo": "Estagio",
+    "mensagem": "Plano de Estagio",
+    "urlRedireciona": "http://fatecig.norton.net.br/slide1.html"
+  },
+  {
+    "codigoSlide": "3",
+    "imagem": "slide3.jpg",
+    "titulo": "Workshop",
+    "mensagem": "Workshop",
+    "urlRedireciona": "http://fatecig.norton.net.br/slide1.html"
+  }
+]
+

@@ -1,0 +1,14 @@
+[
+{
+ "codigoItemMenu":"1",
+ "nomeMenu":"Lateral ADS",
+ "titulo":"Institucional",
+ "urlRedireciona":"teste.html"
+},
+{
+ "codigoItemMenu":"2",
+ "nomeMenu":"Lateral ADS",
+ "titulo":"Cursos",
+ "urlRedireciona":"teste.html"
+}
+]

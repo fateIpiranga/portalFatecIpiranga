@@ -1,0 +1,35 @@
+﻿body h1{
+    text-align: center;
+}
+
+body #formulario1 {
+    text-align: center;
+    float: left;
+    width: 49%;
+    display: block;
+    margin-top: 10px;
+    height: 450px;
+}
+
+body #formulario2 {
+    text-align: center;
+    float: right;
+    width: 49%;
+    display: block;
+    margin-top: 10px;
+    height: 450px;
+}
+
+body .texto-centralizado {
+    text-align: center;
+}
+
+body .labels{
+    display: inline-block;
+    margin-top: 17px;
+}
+
+body .campos {
+    display: inline-block;
+    margin-top: 5px;
+}

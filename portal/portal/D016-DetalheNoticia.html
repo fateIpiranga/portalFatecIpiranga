@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Fatec Ipiranga</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="css/modern-business.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/blog.css">
+
+	<script lang=”javascript”>
+		$(document).ready(function () {
+			$.ajax({
+				url: 'teste/retornaListaDetalheNoticia.json',
+				data: {
+					conteudo: '1234'
+				},
+				error: function (e, b, error) {
+					console.log(e.respone);
+				},
+				success: function (msg) {
+					console.log(msg);
+					$('#titulo').text(msg.titulo);
+					$('#corpo').text(msg.texto);
+					$('#date').text(msg.data);
+				}
+			});
+		});
+
+	</script>
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark fixed-topn navbar-cabecalho">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">
+				<h1><img class=" logo  logo-fatec" src="img/logoFatecIpiranga.png" alt="Fatec Ipiranga"></h1>
+			</a>
+			<a href="http://www.cps.sp.gov.br/" target="_blank">
+				<h2><img class="logo  logo-cps" src="img/logoCpsBranco.png" alt="Centro Paula Souza"></h2>
+			</a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item  itens-nav">
+						<a class="nav-link nav-link--cabecalho" href="about.html">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-link--cabecalho" href="services.html">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-link--cabecalho" href="contact.html">Contact</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle  nav-link--cabecalho  dropdown-cabecalho" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Portfolio
+						</a>
+						<div class="dropdown-menu dropdown-menu-right  dropdown-menu-cabecalho" aria-labelledby="navbarDropdownPortfolio">
+							<a class="dropdown-item  dropdown-item-cabecalho" href="portfolio-1-col.html">1 Column Portfolio</a>
+							<a class="dropdown-item  dropdown-item-cabecalho" href="portfolio-2-col.html">2 Column Portfolio</a>
+							<a class="dropdown-item  dropdown-item-cabecalho" href="portfolio-3-col.html">3 Column Portfolio</a>
+							<a class="dropdown-item  dropdown-item-cabecalho" href="portfolio-4-col.html">4 Column Portfolio</a>
+							<a class="dropdown-item  dropdown-item-cabecalho" href="portfolio-item.html">Single Portfolio Item</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown  ">
+						<a class="nav-link dropdown-toggle  nav-link--cabecalho" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Blog
+						</a>
+						<div class="dropdown-menu dropdown-menu-right  dropdown-menu-cabecalho" aria-labelledby="navbarDropdownBlog">
+							<a class="dropdown-item  dropdown-item-cabecalho" href="blog-home-1.html">Blog Home 1</a>
+							<a class="dropdown-item  dropdown-item-cabecalho" href="blog-home-2.html">Blog Home 2</a>
+							<a class="dropdown-item  dropdown-item-cabecalho" href="blog-post.html">Blog Post</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown  ">
+						<a class="nav-link dropdown-toggle  nav-link--cabecalho" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Other Pages
+						</a>
+						<div class="dropdown-menu  dropdown-menu-right  dropdown-menu-cabecalho" aria-labelledby="navbarDropdownBlog">
+							<a class="dropdown-item  dropdown-item-cabecalho" href="full-width.html">Full Width Page</a>
+							<a class="dropdown-item  dropdown-item-cabecalho" href="sidebar.html">Sidebar Page</a>
+							<a class="dropdown-item  dropdown-item-cabecalho" href="faq.html">FAQ</a>
+							<a class="dropdown-item  dropdown-item-cabecalho" href="404.html">404</a>
+							<a class="dropdown-item  dropdown-item-cabecalho" href="pricing.html">Pricing Table</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Page Content -->
+	<div class="container  conteudo">
+
+		<!-- Page Heading/Breadcrumbs -->
+		<h1 class="mt-4 mb-3" id="titulo">
+			
+			<small>
+				<br />
+				por
+				<a href="#">Juliana de Moraes Lacerda</a>
+			</small>
+		</h1>
+
+		<div class="row">
+
+			<!-- Post Content Column -->
+			<div class="col-lg-8">
+
+				<!-- Preview Image -->
+				<img class="img-fluid rounded" src="/img/slide1.jpg" alt="">
+
+				<hr>
+
+				<!-- Date/Time -->
+				<p id="date">Publicado em 14/10/2017</p>
+
+				<hr>
+
+				<!-- Post Content -->
+				<p class="lead"></p>
+
+				<p id="corpo">
+					
+				</p>
+
+				<p></p>
+
+				<blockquote class="blockquote">
+					<p class="mb-0"></p>
+					<footer class="blockquote-footer">
+
+						<cite title="Source Title"></cite>
+					</footer>
+				</blockquote>
+
+				<p></p>
+
+				<p></p>
+
+				<hr>
+
+				<!-- Comments Form -->
+				<div class="card my-4  card-borda">
+					<h5 class="card-header  card-cabecalho  card-borda">Deixe um comentário:</h5>
+					<div class="card-body">
+						<form>
+							<div class="form-group">
+								<textarea class="form-control  textarea-comentario" rows="3"></textarea>
+							</div>
+							<button type="enviar" class="btn botao-padrao">Enviar</button>
+						</form>
+					</div>
+				</div>
+
+				<!-- Single Comment -->
+				<div class="media mb-4  comentario">
+					<img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+					<div class="media-body">
+						<h5 class="mt-0">Commenter Name</h5>
+						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+					</div>
+				</div>
+
+				<!-- Comment with nested comments -->
+				<div class="media mb-4  comentario">
+					<img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+					<div class="media-body">
+						<h5 class="mt-0">Commenter Name</h5>
+						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+						<div class="media mt-4  comentario">
+							<img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+							<div class="media-body">
+								<h5 class="mt-0">Commenter Name</h5>
+								Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+							</div>
+						</div>
+
+						<div class="media mt-4  comentario">
+							<img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+							<div class="media-body">
+								<h5 class="mt-0">Commenter Name</h5>
+								Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Sidebar Widgets Column -->
+			<div class="col-md-4">
+
+				<!-- Search Widget -->
+				<div class="card mb-4  card-borda">
+					<h5 class="card-header  card-cabecalho  card-borda">Search</h5>
+					<div class="card-body">
+						<div class="input-group">
+							<input type="text" class="form-control  input-pesquisar" placeholder="Search for...">
+							<span class="input-group-btn">
+								<button class="btn  botao-pesquisar" type="button">Go!</button>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Categories Widget -->
+				<div class="card my-4  card-borda">
+					<h5 class="card-header  card-cabecalho  card-borda">Categories</h5>
+					<div class="card-body">
+						<div class="row">
+							<div class="col-lg-6">
+								<ul class="list-unstyled mb-0  categoria-list">
+									<li>
+										<a href="#">Web Design</a>
+									</li>
+									<li>
+										<a href="#">HTML</a>
+									</li>
+									<li>
+										<a href="#">Freebies</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-lg-6">
+								<ul class="list-unstyled mb-0  categoria-list">
+									<li>
+										<a href="#">JavaScript</a>
+									</li>
+									<li>
+										<a href="#">CSS</a>
+									</li>
+									<li>
+										<a href="#">Tutorials</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Side Widget -->
+				<div class="card my-4  card-borda">
+					<h5 class="card-header  card-cabecalho  card-borda">Side Widget</h5>
+					<div class="card-body">
+						<p>
+							You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- /.row -->
+
+	</div>
+	<!-- /.container -->
+	<!-- Footer -->
+	<footer class="py-5  rodape">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+		</div>
+		<!-- /.container -->
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/popper/popper.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

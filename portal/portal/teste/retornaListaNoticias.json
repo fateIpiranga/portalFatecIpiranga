@@ -1,0 +1,83 @@
+[
+  {
+    "codigoConteudo": "1",
+    "posicao": "1",
+    "titulo": "Institucional",
+    "data": "10/10/2017",
+    "chamada": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imagemDestaque": "imagem1.jpg",
+    "urlRedireciona": "conteudo.html?t=N&p=1"
+  },
+  {
+    "codigoConteudo": "2",
+    "posicao": "2",
+    "titulo": "Noticia1",
+    "data": "09/10/2017",
+    "chamada": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imagemDestaque": "imagem2.jpg",
+    "urlRedireciona": "conteudo.html?t=N&p=2"
+  },
+  {
+    "codigoConteudo": "3",
+    "posicao": "3",
+    "titulo": "Noticia3",
+    "data": "08/10/2017",
+    "chamada": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imagemDestaque": "imagem3.jpg",
+    "urlRedireciona": "conteudo.html?t=N&p=3"
+  },
+  {
+    "codigoConteudo": "1",
+    "posicao": "1",
+    "titulo": "Institucional",
+    "data": "10/10/2017",
+    "chamada": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imagemDestaque": "imagem1.jpg",
+    "urlRedireciona": "conteudo.html?t=N&p=1"
+  },
+  {
+    "codigoConteudo": "2",
+    "posicao": "2",
+    "titulo": "Noticia1",
+    "data": "09/10/2017",
+    "chamada": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imagemDestaque": "imagem2.jpg",
+    "urlRedireciona": "conteudo.html?t=N&p=2"
+  },
+  {
+    "codigoConteudo": "3",
+    "posicao": "3",
+    "titulo": "Noticia3",
+    "data": "08/10/2017",
+    "chamada": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imagemDestaque": "imagem3.jpg",
+    "urlRedireciona": "conteudo.html?t=N&p=3"
+  },
+  {
+    "codigoConteudo": "1",
+    "posicao": "1",
+    "titulo": "Institucional",
+    "data": "10/10/2017",
+    "chamada": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imagemDestaque": "imagem1.jpg",
+    "urlRedireciona": "conteudo.html?t=N&p=1"
+  },
+  {
+    "codigoConteudo": "2",
+    "posicao": "2",
+    "titulo": "Noticia1",
+    "data": "09/10/2017",
+    "chamada": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imagemDestaque": "imagem2.jpg",
+    "urlRedireciona": "conteudo.html?t=N&p=2"
+  },
+  {
+    "codigoConteudo": "3",
+    "posicao": "3",
+    "titulo": "Noticia3",
+    "data": "08/10/2017",
+    "chamada": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imagemDestaque": "imagem3.jpg",
+    "urlRedireciona": "conteudo.html?t=N&p=3"
+  }
+]

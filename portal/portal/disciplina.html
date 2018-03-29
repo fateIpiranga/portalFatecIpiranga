@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fatec Ipiranga</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/disciplina.css">
+
+  </head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="fixed-top navbar-expand-lg fixed-topn navbar-dark navbar-cabecalho">
+      <div class="menu-main">
+          <div class="container">
+              <div class="row align-items-center">
+                  <div class="col-3 col-sm-3 col-md-3 col-lg-2  cabecalho-item">
+                      <h1><a href="index.html"><img class="logo" src="img/logoFatecIpiranga.png" alt="Fatec Ipiranga"></a></h1>
+                  </div>
+                  <div class=" col-lg-4 cabecalho-item cabecalho-item-busca">
+                      <div class="input-group collapse navbar-collapse" id="inputResponsive">
+                          <input type="text" class="form-control  input-pesquisar" placeholder="Search for...">
+                          <span class="input-group-btn  ">
+                              <button class="btn btn-pesquisar" type="button"></button>
+                          </span>
+                      </div>
+                  </div>
+
+                  <div class="col-3 col-sm-3 col-md-3 col-lg-2  cabecalho-item cabecalho-item-cps">
+                      <h2><a href="http://www.cps.sp.gov.br/" target="_blank"><img class="logo-cps" src="img/logoCpsBranco.png" alt="Centro Paula Souza"></a></h2>
+                  </div>
+                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+              </div>
+          </div>
+      </div>
+    <div class="row align-items-center menu-suspenso">
+      <div class="container"> 
+        
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav menu-lista js-menu">
+            <li class="nav-item  itens-nav">
+              <div class="cabecalho-item dropdown-item-busca">
+                <div class="input-group" id="inputResponsive">
+                  <input type="text" class="form-control  input-pesquisar" placeholder="Search for...">
+                  <span class="input-group-btn  ">
+                    <button class="btn btn-pesquisar" type="button"></button>
+                  </span>
+                </div>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+    </div>
+    </div>
+  </nav>
+
+  <header class="carrossel">
+        <div id="carouselExampleIndicators" class="carousel slide js-slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                 
+            </ol>
+            <div class="carousel-inner  js-carousel" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active  carrossel-item-1">
+                    <a class="link1" href="#">
+                        <div class="carousel-caption d-none d-md-block">
+
+                        </div>
+                    </a>
+                </div>
+                <!-- Slides Dinamicos -->
+                
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="container  conteudo">
+        <h1 id="tituloCurso"></h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item active" id="listaCurso"></li>
+        </ol>
+  
+        <div class="js-noticia">
+            
+        </div>
+      <!-- Pagination -->
+      <ul class="pagination justify-content-center  paginacao">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 rodape">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/popper/popper.min.js"></script>  
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/carregarSlidesDisciplinas.js"></script>
+  <script src="js/noticiasDisciplinas.js"></script>
+  <script src="js/carregarMenuPrincipal.js"></script>
+  <script src="js/mostrarMenuPrincipal.js"></script>
+</body>
+</html>

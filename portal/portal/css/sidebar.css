@@ -1,0 +1,238 @@
+/* 
+
+-G E R A L-
+
+*/
+
+	body {
+		background-color: #fcfcfc;
+	}
+
+
+ /* 
+
+-C A B E C A L H O-
+
+*/
+
+    .navbar-cabecalho .menu-main {
+        padding-top: 5px;
+        background-color: #A3130D;
+        background-image: linear-gradient(to bottom, transparent, rgba(220, 20, 14, 0.7));
+    }
+
+
+    .navbar-cabecalho .nav-link--cabecalho {
+        color: #fff;
+    }
+
+    .cabecalho-item {
+        margin: 5px 0;
+    }
+
+    .cabecalho-item-busca {
+        margin-left: 16.66667%;
+    }
+
+    .cabecalho-item-cps {
+        margin-left: 16.66667%;
+    }
+
+    .input-pesquisar {
+        border: 1px solid #425461;
+    }
+
+    .btn-pesquisar {
+        height: 40px;
+        width: 40px;
+        background-size: 100%;
+        background-color: #425461;
+        background-image: url("../img/icon-search.png");
+        background-repeat: no-repeat;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .logo-cps {
+        width: 70%;
+    }
+
+    .menu-suspenso {
+        background-color: #a3130d;
+        background-image: linear-gradient(to top, transparent, rgba(220, 20, 14, 0.45));
+    }
+
+    @media (min-width: 992px) {
+
+        .dropdown-menu {
+            border-radius: 0 0 5px 5px;
+            border: 1px solid rgba(163, 19, 13, 0.75);
+            background-color: rgba(163, 19, 13, .75);
+        }
+
+        .dropdown-menu-cabecalho {
+            margin-top: 0;
+            width: 190px;
+        }
+
+        .dropdown-item {
+            text-align: center;
+            color: #fff;
+        }
+
+        .dropdown-item-busca {
+            display: none;
+        }
+
+        .dropdown-item:active {
+            background-color: #fee;
+        }
+
+        .dropdown-item:hover {
+            color: #A3130D;
+        }
+
+        .menu-lista {
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 991px) {
+
+        .navbar-toggler {
+            margin-left: 16.66667%;
+        }
+
+        .cabecalho-item-busca {
+            display: none;
+        }
+
+        .navbar-nav > li:first-child {
+            border-top: 1px solid #fff;
+        }
+
+        .dropdown-menu-cabecalho {
+            position: static !important;
+            transform: none !important;
+            float: none;
+            padding: 0;
+            border: 1px solid #fff;
+            background-color: inherit;
+        }
+
+        .dropdown-item-cabecalho {
+            color: #fff;
+            background-color: inherit;
+        }
+
+        .dropdown-item-cabecalho:hover {
+            color: #A3130D;
+            background-color: #fff;
+        }
+
+        .dropdown-item-cabecalho:active {
+            background-color: #fff;
+            color: #A3130D;
+        }
+
+        ul .dropdown-menu:last-child {
+            margin-bottom: 5px;
+        }
+    }
+
+/*
+
+-B R E A D C R U M B
+
+*/
+
+	.breadcrumb-item a {
+
+		color: #A3130D;
+	}
+
+	.breadcrumb-item.active {
+
+		color: #425451;	
+	}
+
+
+/*
+
+-C O N T E U D O
+
+*/
+
+    .conteudo {
+        position: relative;
+        top: 22px;
+        margin-top: 10px;
+    }
+
+	.conteudo h1, 
+	.conteudo h2,
+	.conteudo h3,
+	.conteudo h4 {
+
+		color: #A3130D;
+
+	}
+
+	.conteudo p {
+		color: #425461;
+	}
+
+	.conteudo a {
+		color: #A3130D;
+	}
+
+/*
+
+-S I D E B A R
+
+*/
+	.barra-lateral a {
+		border-color: #A3130D;
+	}
+
+    .barra-lateral a:hover {
+        background-color: #e9ecef;
+    }
+
+	.barra-lateral a.active {
+
+		background-color: #A3130D;
+		background-image: linear-gradient(to bottom, transparent, rgba(220, 20, 14, 0.9 ));
+		border-color: #A3130D;
+
+		color: #fff;	
+	}
+
+    @media(min-width: 992px) {
+        .conteudo {
+            position: relative;
+            top: 80px;
+        }
+    }
+
+/*
+
+-R O D A P E
+
+*/
+    .rodape {
+        position: relative;
+        top: 22px;
+        width: 100%;
+        margin-top: 10px;
+        background-color: #425461;
+    }
+
+    @media(min-width: 992px) {
+        .rodape {
+            position: relative;
+            top: 75px;
+        }
+    }

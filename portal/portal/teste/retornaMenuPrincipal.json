@@ -1,0 +1,28 @@
+[
+{
+ "codigoItemMenu":"1",
+ "nomeMenu":"principal",
+ "titulo":"Institucional",
+ "urlRedireciona":"teste.html",  
+ "itens" :	{
+				"item": [
+					{"nomeSubmenu":"Cursos","url":"detalhe.html?id=34"}, 
+					{"nomeSubmenu":"Secretaria","url":"detalhe.html?id=32"},
+					{"nomeSubmenu":"Direção Academica","url":"detalhe.html?id=31"}
+					]
+			}
+},
+{
+ "codigoItemMenu":"2",
+ "nomeMenu":"principal",
+ "titulo":"Cursos",
+ "urlRedireciona":"teste.html",  
+ "itens" :	{
+				"item": [
+					{"nomeSubmenu":"ADS","url":"curso.html?c=ADS"}, 
+					{"nomeSubmenu":"RH","url":"curso.html?c=RH"}, 
+					{"nomeSubmenu":"Eventos","url":"curso.html?c=EVENTOS"} 
+					]
+			}
+}
+]

@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="portal.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Server=localhost;Database=norton_fatecig;Uid=norto_fatecig;Pwd=freiJoao59;</Value>
+    </Setting>
+    <Setting Name="smtp" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Server=baratheon0001.hospedagemdesites.ws;Database=norton_fatecig;Uid=norto_fatecig;Pwd=freiJoao59;</Value>
+    </Setting>
+    <Setting Name="PathErrorLog" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\\Users\\Public\\log.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

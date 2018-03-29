@@ -1,0 +1,27 @@
+[
+{
+ "codigoConteudo":"1",
+ "posicao":"1",
+ "titulo":"Institucional",
+ "chamada":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+ "imagemDestaque":"imagem1.jpg",
+ "urlRedireciona":"teste.html" 
+},
+{
+ "codigoConteudo":"2",
+ "posicao":"2",
+ "titulo":"Noticia1",
+ "chamada":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+ "imagemDestaque":"imagem2.jpg",
+ "urlRedireciona":"teste.html"
+}
+,
+{
+ "codigoConteudo":"3",
+ "posicao":"3",
+ "titulo":"Noticia3",
+ "chamada":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+ "imagemDestaque":"imagem3.jpg",
+ "urlRedireciona":"teste.html"
+}
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "codigoConteudo": "1",
+    "posicao": "1",
+    "titulo": "ADS",
+    "chamada": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imagemDestaque": "img/curso1.png",
+    "urlRedireciona": "curso.html?curso=1"
+  },
+  {
+    "codigoConteudo": "2",
+    "posicao": "2",
+    "titulo": "Gecom",
+    "chamada": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imagemDestaque": "img/curso2.png",
+    "urlRedireciona": "curso.html?curso=2"
+  },
+  {
+    "codigoConteudo": "3",
+    "posicao": "3",
+    "titulo": "Eventos",
+    "chamada": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imagemDestaque": "img/curso3.png",
+    "urlRedireciona": "curso.html?curso=3"
+  },
+  {
+    "codigoConteudo": "4",
+    "posicao": "4",
+    "titulo": "RH",
+    "chamada": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imagemDestaque": "img/curso4.png",
+    "urlRedireciona": "curso.html?curso=4"
+  },
+  {
+    "codigoConteudo": "5",
+    "posicao": "5",
+    "titulo": "EAD Gestão Empresarial",
+    "chamada": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imagemDestaque": "img/curso5.png",
+    "urlRedireciona": "curso.html?curso=5"
+  }
+
+]

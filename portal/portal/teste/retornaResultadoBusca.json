@@ -1,0 +1,27 @@
+[
+{
+ "codigoConteudo":"1",
+ "tipo":"noticia",
+ "titulo":"Vestibular Fatec",
+ "resumo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+ "imagemDestaque":"noticia_1.jpg",
+ "urlRedireciona":"noticiaDetalhe.html?id=1&t=vestibular fatec" 	
+},
+{
+ "codigoConteudo":"2",
+ "tipo":"Conteudo",
+ "titulo":"Websai",
+ "resumo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+ "imagemDestaque":"detalhe_2.jpg",
+ "urlRedireciona":"detalhe.html?id=1&t=Websai" 	
+},
+{
+ "codigoConteudo":"3",
+ "tipo":"noticia",
+ "titulo":"Novo Portal",
+ "resumo":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+ "imagemDestaque":"noticia_3.jpg",
+ "urlRedireciona":"noticiaDetalhe.html?id=1&t=novo portal" 	
+}
+]
+
