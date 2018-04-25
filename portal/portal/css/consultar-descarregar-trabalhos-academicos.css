@@ -233,6 +233,20 @@ body {
     color: #A3130D
 }
 
+/*Botão buscar descarregar trabalho academico*/
+.collapse .categoria-list li .button1, .collapse .categoria-list li .button2, .collapse .categoria-list li .button3  {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+
+.collapse .categoria-list li .button1:hover, .collapse .categoria-list li .button2:hover, .collapse .categoria-list li .button3:hover {
+    background-color: #008CBA;
+    color: white;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
 /* -comentario */
 .comentario {
     color: #425461;
@@ -274,7 +288,7 @@ body {
 
 .rodape {
     position: relative;
-    top: 22px;
+    top: 267px; 
     width: 100%;
     margin-top: 10px;
     background-color: #425461;
