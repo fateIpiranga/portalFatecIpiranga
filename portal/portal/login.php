@@ -3,6 +3,8 @@
     $email = '';
     $pass = '';
     
+    session_start();
+
     if(isset($_POST["email"])){
         $email = $_POST["email"];
         $pass = $_POST["password"];
@@ -19,6 +21,7 @@
         if(empty($result_query)){
             $msg = "Usuário ou senha incorretos.";
         }else{
+            $_SESSION["user_portal"] = $result_query["nome"];
             header("location:index.html");
         }   
     }
@@ -47,6 +50,9 @@
         <div class="card card-login mx-auto mt-5">
             <div class="card-header">Login</div>
             <div class="card-body">
+            <?php if (isset($msg)){ ?>
+                <div id="mensagem"><?php echo $msg ?></div>
+            <?php } ?>
             <form action="" method="post">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Endereço de e-mail</label>
@@ -67,13 +73,11 @@
                 
                 <!--<a class="btn btn-primary btn-block" href="index.html">Login</a>-->
                 <input class="btn btn-primary btn-block" type="submit" value="Login">
-                <?php if (isset($msg)){ ?>
-                <label id="msgErro"><?php echo $msg ?></label>
-                <?php } ?>
+                
             </form>
             <div class="text-center">
-              <a class="d-block small mt-3" href="register.html">Cadastrar</a>
-              <a class="d-block small" href="forgot-password.html">Esqueci minha senha</a>
+              <a class="d-block small mt-3" href="cadastro.php">Cadastrar</a>
+              <a class="d-block small" href="esqueci-senha.php">Esqueci minha senha</a>
             </div>
           </div>
         </div>
