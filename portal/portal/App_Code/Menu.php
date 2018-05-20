@@ -2,11 +2,13 @@
 ###################################################################################################################
 //Gilberto Shimokawa Falcão - 05/05/2018
 ####################################################################################################################
-//CADASTROS DE MENUS (menu arvore).
-require("MenuItem.php");
 
-namespace portal.App_Code {
-    public class Menu {
+
+namespace portal\App_Code {
+//CADASTROS DE MENUS (menu arvore).
+require_once("MenuItem.php");
+    
+    class Menu {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------
         private $codigo;//Double
         private $nome;//String
@@ -14,7 +16,7 @@ namespace portal.App_Code {
 		private $Tipos;//String: Principal, MenuLateral, HotSite
 		private $items = [];//Lista de Objeto MenuItem
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public __construct($DoubleCodigo,$StringNome,$BooleanTipoStatus,$StringTipos){
+		public function __construct($DoubleCodigo,$StringNome,$BooleanTipoStatus,$StringTipos){
 			$this -> codigo = $DoubleCodigo;
 			$this -> nome = $StringNome;
 			$this -> TipoStatus = $BooleanTipoStatus;
@@ -51,7 +53,7 @@ namespace portal.App_Code {
 			return $this -> Tipos;
         }		
         public function getItems_OBJ () {
-			return $this -> items [];
+			return $this -> items;
         }		
     }
 }

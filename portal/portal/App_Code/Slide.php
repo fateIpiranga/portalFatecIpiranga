@@ -4,8 +4,8 @@
 ####################################################################################################################
 //SLIDES: Apresenta imagens, fotos relacionadas àquela noticia.
 
-namespace portal.App_Code {
-    public class Slide {
+namespace portal\App_Code {
+    class Slide {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------	
         private $codigo;//Double
         private $imagem;//String
@@ -15,7 +15,7 @@ namespace portal.App_Code {
         private $url;//String
         private $TipoStatus;//Boolean true - Ativo, false - Inativo.
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public __construct($DoubleCodigo,$StringImagem,$StringGrupo,$StringTitulo,$StringMensagem,$StringURL,$BooleanTipoStatus){
+		public function __construct($DoubleCodigo,$StringImagem,$StringGrupo,$StringTitulo,$StringMensagem,$StringURL,$BooleanTipoStatus){
 			$this -> codigo = $DoubleCodigo;
 			$this -> imagem = $StringImagem;
 			$this -> grupo = $StringGrupo;

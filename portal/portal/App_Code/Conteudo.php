@@ -4,12 +4,14 @@
 ####################################################################################################################
 /*CONTEÚDO: É todo o texto apresentado dentro do SITE, Apresentando conteúdo. Possui diversos formatos, tipos, palavra chaves, chamadas.*/
 
-//INTANCIA DE SEGURANÇA ---------------------------------------------------------------------------------------------
-Require("Menu.php");
-Require ("Categoria.php");
 
-namespace portal.App_Code{
-	public class Conteudo {
+
+namespace portal\App_Code{
+//INTANCIA DE SEGURANÇA ---------------------------------------------------------------------------------------------
+require_once("Menu.php");
+require_once ("Categoria.php");
+    
+	class Conteudo {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------
         private $codigo;//Double
         private $nome;//String
@@ -22,7 +24,7 @@ namespace portal.App_Code{
 		private $menuRelacionado;//Obj Menu.php
 		private $listaCategoria;//Obj Categoria.php
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public __construct($DoubleCodigo,$StringNome,$StringTitulo,$StringDescritivo,$StringKeywords,$StringDataPublicado,$BoleanTipoStatus){
+		public function __construct($DoubleCodigo,$StringNome,$StringTitulo,$StringDescritivo,$StringKeywords,$StringDataPublicado,$BoleanTipoStatus){
 			$this -> codigo = $DoubleCodigo;
 			$this -> nome = $StringNome;
 			$this -> titulo = $StringTitulo;

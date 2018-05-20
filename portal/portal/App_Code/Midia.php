@@ -5,15 +5,15 @@
 /*MÍDIA: Gerencia Arquivos que estão feitos Uploads.
 EX: POWER POINT, DOC, EXCEL, PPT, ETC SEAO OS ADMS QUE FAZEM ESSES UPLOADS.*/
 
-namespace portal.App_Code {
-    public class Midia {
+namespace portal\App_Code {
+    class Midia {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------				
         private $codigo;//Double
         private $nome;//String
         private $url;//String
         private $data;//String
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public __construct($DoubleCodigo,$StringNome,$StringURL,$StringData){
+		public function __construct($DoubleCodigo,$StringNome,$StringURL,$StringData){
 			$this -> codigo = $DoubleCodigo;
 			$this -> nome = $StringNome;
 			$this -> url = $StringURL;

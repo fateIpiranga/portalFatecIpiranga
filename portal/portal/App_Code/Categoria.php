@@ -4,8 +4,8 @@
 ####################################################################################################################
 /* CATEGORIA: Classifica tipos de conteúdo competente de cada disciplina, "grupos de conteúdo". -> A Página é personalizada para aquele tipo de conteúdo. */
 
-namespace portal.App_Code {
-	public class Categoria {
+namespace portal\App_Code {
+	class Categoria {
 		//ATRIBUTES----------------------------------------------------------------------
 			private $codigo;//Double
 			private $descritivo;//String
