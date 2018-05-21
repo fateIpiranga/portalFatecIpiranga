@@ -4,10 +4,11 @@
 ####################################################################################################################
 //USUÁRIO: Responsável pela área de acesso administrativa.
 
-require ("GrupoAcesso.php");
 
-namespace portal.App_Code {
-    public class Usuario {
+
+namespace portal\App_Code {
+require_once ("GrupoAcesso.php");
+    class Usuario {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------		
         private $codigo;//Double
         private $nome;//String
@@ -16,7 +17,7 @@ namespace portal.App_Code {
 		private $TipoStatus;//Boolean true - Ativo, false - Inativo.
 		private $AcessGroup;//OBJ GrupoAcesso
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public __construct($DoubleCodigo,$StringNome,$StringEmail,$StringSenha,$BooleanTipoStatus){
+		public function __construct($DoubleCodigo,$StringNome,$StringEmail,$StringSenha,$BooleanTipoStatus){
 			$this -> codigo = $DoubleCodigo;
 			$this -> nome = $StringNome;
 			$this -> email = $StringEmail;

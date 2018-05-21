@@ -53,7 +53,7 @@
             <div class="card-header">Login</div>
             <div class="card-body">
             <?php if (isset($msg)){ ?>
-                <!--<style type="text/css"> #mensagem{ display:block; }</style>-->
+                <style type="text/css"> #mensagem{ display:block; }</style>
                 <div id="mensagem" >
                     <?php echo $msg ?>
                 </div>

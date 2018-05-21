@@ -4,16 +4,16 @@
 ####################################################################################################################
 //UTIL: Classe Genéric Static Singleton; Reutiliza métodos, usa email, uploads, Grava logins, etc.
 
-namespace portal.App_Code {
+namespace portal\App_Code {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------		
-    public class Util {
+    class Util {
         private $NomeCompleto;//String
         private $Fone;//Integer
         private $Email;//String
         private $Assunto;//String
         private $Mensagem;//String
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public __construct($StringCompleteName,$IntFone,$StringEmail,$StringAssunto,$StringMensagem){
+		public function __construct($StringCompleteName,$IntFone,$StringEmail,$StringAssunto,$StringMensagem){
 			$this -> NomeCompleto = $StringCompleteName;
 			$this -> Fone = $IntFone;
 			$this -> Email = $StringEmail;

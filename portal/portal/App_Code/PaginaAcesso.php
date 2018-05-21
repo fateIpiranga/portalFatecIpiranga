@@ -5,16 +5,16 @@
 /*PÁGINA AECESSO: Gerencia área administrativa
 Ex: Descritivo, Posts, Implementa controle de acesso dos usuários, cadastrar novo usuário, Notícia, etc.*/
 
-namespace portal.App_Code {
+namespace portal\App_Code {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------		
-    public class PaginaAcesso {
+    class PaginaAcesso {
         private $codigo;//Double
         private $nome;//String
         private $descritivo;//String
         private $pagina;//String
         private $TipoStatus;//Boolean true - Ativo, false - Inativo.
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public __construct($DoubleCodigo,$StringNome,$StringDescritivo,$StringPagina,$BooleanTipoStatus){
+		public function __construct($DoubleCodigo,$StringNome,$StringDescritivo,$StringPagina,$BooleanTipoStatus){
 			$this -> codigo = $DoubleCodigo;
 			$this -> nome = $StringNome;
 			$this -> descritivo = $StringDescritivo;

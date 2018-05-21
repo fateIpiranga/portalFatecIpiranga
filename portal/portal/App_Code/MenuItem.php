@@ -3,8 +3,8 @@
 //Gilberto Shimokawa Falcão - 01/05/2018
 ####################################################################################################################
 //Compõe o menu, são os links 
-namespace portal.App_Code {
-    public class MenuItem {
+namespace portal\App_Code {
+    class MenuItem {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------		
         private $codigo;//Double
         private $codigoMenu;//Double
@@ -13,7 +13,7 @@ namespace portal.App_Code {
         private $nome;//String
         private $url;//String
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public __construct($DoubleCodigo,$DoubleCodigoMenu,$DoubleCodigoItemPai,$DoubleCodigoConteudo,$StringNome,$StringURL){
+		public function __construct($DoubleCodigo,$DoubleCodigoMenu,$DoubleCodigoItemPai,$DoubleCodigoConteudo,$StringNome,$StringURL){
 			$this -> codigo = $DoubleCodigo;
 			$this -> codigoMenu = $DoubleCodigoMenu;
 			$this -> codigoItemPai = $DoubleCodigoItemPai;

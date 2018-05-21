@@ -4,8 +4,8 @@
 ####################################################################################################################
 //LOG OPERAÇÃO: Guarda LOGS do sistema (Ações feitas por usuários).
 
-namespace portal.App_Code {
-    public class LogOperacao {
+namespace portal\App_Code {
+    class LogOperacao {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------		
         private $codigo;//Double
         private $tabela;//String
@@ -14,7 +14,7 @@ namespace portal.App_Code {
         private $data;//String
         private $tipoOperacao;//String (Inserir, Excluir, Alterar) <~ Operações do banco de dados.
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public __construct ($DoubleCodigo,$StringTable,$DoubleCodigoChave,$DoubleCodigoUsuario,$StringData,$StringTipoOperacao){
+		public function __construct ($DoubleCodigo,$StringTable,$DoubleCodigoChave,$DoubleCodigoUsuario,$StringData,$StringTipoOperacao){
 			$this -> codigo = $DoubleCodigo;
 			$this -> tabela = $StringTable;
 			$this -> codigoChave = $DoubleCodigoChave;

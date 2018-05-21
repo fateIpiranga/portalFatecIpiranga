@@ -3,17 +3,18 @@
 //Gilberto Shimokawa Falcão - 30/04/2018
 ####################################################################################################################
 //GRUPO ACESSO: Trabalha com páginas de acesso bem como composição das mesmas, Cada usuário acessa informações competentes a sua área.
-Require("PaginaAcesso.php");
 
-namespace portal.App_Code {
-    public class GrupoAcesso {
+
+namespace portal\App_Code {
+require_once("PaginaAcesso.php");
+    class GrupoAcesso {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------		
         private $codigo;//Double
         private $nome;//String
 		private $TipoStatus;//Boolean true - Ativo, false - Inativo.
 		private $PaginaAcesso;//OBJ PaginaAcesso.php
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public __construct($DoubleCodigo,$StringNome,$BooleanTipoStatus){
+		public function __construct($DoubleCodigo,$StringNome,$BooleanTipoStatus){
 			$this -> codigo = $DoubleCodigo;
 			$this -> nome = $StringNome;
 			$this -> TipoStatus = $BooleanTipoStatus;
