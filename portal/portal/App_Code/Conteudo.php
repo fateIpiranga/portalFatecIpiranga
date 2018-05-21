@@ -24,17 +24,17 @@ require_once ("Categoria.php");
 		private $menuRelacionado;//Obj Menu.php
 		private $listaCategoria;//Obj Categoria.php
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public function __construct($DoubleCodigo,$StringNome,$StringTitulo,$StringDescritivo,$StringKeywords,$StringDataPublicado,$BoleanTipoStatus){
+		public function __construct($DoubleCodigo,$StringNome,$StringTitulo,$StringDescritivo,$StringKeywords,$StringTipo,$StringDataPublicado,$BoleanTipoStatus, Menu $menuRelacionado, Categoria $category){
 			$this -> codigo = $DoubleCodigo;
 			$this -> nome = $StringNome;
 			$this -> titulo = $StringTitulo;
 			$this -> descritivo = $StringDescritivo;
 			$this -> keywords = $StringKeywords;
-			$this -> tipo = "Destaque";
+			$this -> tipo = $StringTipo;
 			$this -> dataPublicado = $StringDataPublicado;
 			$this -> TipoStatus = $BoleanTipoStatus;
-			$this -> menuRelacionado = new Menu();
-			$this-> listaCategoria = new Categoria();
+			$this -> menuRelacionado = $menuRelacionado;
+			$this-> listaCategoria = $category;
 		}
 //SETS-----------------------------------------------------------------------------------------------------------------
 		public function setCodigo_InDouble ($DoubleCodigo){

@@ -14,11 +14,11 @@ require_once("PaginaAcesso.php");
 		private $TipoStatus;//Boolean true - Ativo, false - Inativo.
 		private $PaginaAcesso;//OBJ PaginaAcesso.php
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public function __construct($DoubleCodigo,$StringNome,$BooleanTipoStatus){
+		public function __construct($DoubleCodigo,$StringNome,$BooleanTipoStatus, PaginaAcesso $pagina){
 			$this -> codigo = $DoubleCodigo;
 			$this -> nome = $StringNome;
 			$this -> TipoStatus = $BooleanTipoStatus;
-			$this -> PaginaAcesso = new PaginaAcesso();
+			$this -> PaginaAcesso = $pagina;
 		}
 //SETS-----------------------------------------------------------------------------------------------------------------        
 		public function setCodigo_InDouble ($DoubleCodigo){

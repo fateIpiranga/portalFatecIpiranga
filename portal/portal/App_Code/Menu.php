@@ -16,12 +16,12 @@ require_once("MenuItem.php");
 		private $Tipos;//String: Principal, MenuLateral, HotSite
 		private $items = [];//Lista de Objeto MenuItem
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public function __construct($DoubleCodigo,$StringNome,$BooleanTipoStatus,$StringTipos){
+		public function __construct($DoubleCodigo,$StringNome,$BooleanTipoStatus,$StringTipos, MenuItem $menuIt){
 			$this -> codigo = $DoubleCodigo;
 			$this -> nome = $StringNome;
 			$this -> TipoStatus = $BooleanTipoStatus;
 			$this -> Tipos = $StringTipos;
-			$this -> items [] = new MenuItem();
+			$this -> items [] = $menuIt;
 		}
 //SETS-----------------------------------------------------------------------------------------------------------------        
 		public function setCodigo_InDouble ($DoubleCodigo){

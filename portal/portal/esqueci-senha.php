@@ -1,6 +1,6 @@
 <?php
-    if(isset($_POST["inputEmail1"])){
-        $email = $_POST["inputEmail1"];
+    if(isset($_POST["inputEmail1"])){// Chamou 
+        $email = $_POST["inputEmail1"];//Email do usuário "para" a fatec esta enviando o procedimento.
         $mensagem 		= "Teste envio de e-mail.";
 
         require_once("phpmailer/class.phpmailer.php");
@@ -32,7 +32,7 @@
             }
         }
 
-        if (smtpmailer($email, 'cesar.matsubayashi@gmail.com', 'Portal Fatec Ipiranga', 'Teste Email', $mensagem)) {
+        if (smtpmailer($email, 'emailFatecInstrucao@gmail.com', 'Portal Fatec Ipiranga', 'Assunto do Email', $mensagem)) {
 
             Header("location:login.php"); // Redireciona para uma página de login.
 

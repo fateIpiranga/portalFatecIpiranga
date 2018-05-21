@@ -17,13 +17,13 @@ require_once ("GrupoAcesso.php");
 		private $TipoStatus;//Boolean true - Ativo, false - Inativo.
 		private $AcessGroup;//OBJ GrupoAcesso
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public function __construct($DoubleCodigo,$StringNome,$StringEmail,$StringSenha,$BooleanTipoStatus){
+		public function __construct($DoubleCodigo,$StringNome,$StringEmail,$StringSenha,$BooleanTipoStatus, GrupoAcesso $acessGroup){
 			$this -> codigo = $DoubleCodigo;
 			$this -> nome = $StringNome;
 			$this -> email = $StringEmail;
 			$this -> senha = $StringSenha;
 			$this -> TipoStatus = $BooleanTipoStatus;
-			$this -> AcessGroup = new GrupoAcesso();
+			$this -> AcessGroup = $acessGroup;
 		}			
 //SETS-----------------------------------------------------------------------------------------------------------------        
 		public function setCodigo_InDouble ($DoubleCodigo){
