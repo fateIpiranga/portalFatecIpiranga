@@ -46,8 +46,11 @@
                 <select class="form-control" name="menuRelacionado" aria-describedby="menuRelacionado">
 					<option value="0"> Nenhum menu relacionado</option>
 					<?php
-							while ($registro = @mysql_fetch_array($result)) {
-
+						
+							$con = mysqli_connect("baratheon0001.hospedagemdesites.ws","norto_fatecig","freiJoao59","norton_fatecig");
+							$sql = "select codigo, nome from menu where status=1";
+							$result = mysqli_query($con, $sql);
+							while ($registro = @mysqli_fetch_array($result)) {
 								$codigo = $registro ["codigo"];
 								$nome = $registro ["nome"];
 								echo"<option value='$codigo'> $nome </option>";
@@ -125,17 +128,6 @@
 </html>
 
 <?php
-	
-	
-	function carregaMenu(){
-		
-		$con = new mysqli("baratheon0001.hospedagemdesites.ws","norto_fatecig","freiJoao59","norton_fatecig");
-		$sql = "select codigo, nome from menu where status=1";
-        $result = mysql_query($sql) or die ("Ops, deu Erro!!!");
-		$con->close();
-		
-
-   }
 	
 	function busca()
 	{
