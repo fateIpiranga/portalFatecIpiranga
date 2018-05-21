@@ -1,5 +1,5 @@
 <?php
-    require_once("connection.php");
+    require("connection.php");
     $email = '';
     $pass = '';
     
@@ -12,14 +12,16 @@
         $login = "SELECT * FROM usuario ";
         $login .= "WHERE email = '{$email}' AND senha = '{$pass}' ";
         
+        $connect = BD_AbrirConexao();
         $access = mysqli_query($connect, $login);
         if(!$access){
             die("Falha na consulta ao banco");
         }
-        
+        BD_FecharConexao($connect);
         $result_query = mysqli_fetch_assoc ($access);
         if(empty($result_query)){
             $msg = "Usuário ou senha incorretos.";
+            echo "senha errada";
         }else{
             $_SESSION["user_portal"] = $result_query["nome"];
             header("location:index.html");
@@ -51,7 +53,10 @@
             <div class="card-header">Login</div>
             <div class="card-body">
             <?php if (isset($msg)){ ?>
-                <div id="mensagem"><?php echo $msg ?></div>
+                <!--<style type="text/css"> #mensagem{ display:block; }</style>-->
+                <div id="mensagem" >
+                    <?php echo $msg ?>
+                </div>
             <?php } ?>
             <form action="" method="post">
                 <div class="form-group">
@@ -91,8 +96,4 @@
 
 </html>
 
-
-<?php
-    mysqli_close($connect);
-?>
 

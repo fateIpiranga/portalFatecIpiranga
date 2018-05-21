@@ -1,5 +1,5 @@
 <?php
-    require_once("connection.php");
+    require("connection.php");
     
 
     if (isset($_POST["inputName"])){
@@ -10,9 +10,10 @@
         $senha = $_POST["inputPassword1"];
         $confirmaSenha = $_POST["confirmPassword"];
         $status = 1;
-        
+        $connect = BD_AbrirConexao();
         $verifEmail = "SELECT * FROM usuario WHERE email = '{$email}'";
         $access = mysqli_query($connect, $verifEmail);
+        BD_FecharConexao($connect);
         if(!$access){
             die("Falha na consulta ao banco");
         }
@@ -25,7 +26,9 @@
             $insertString .= "('$nomeCompleto', '$email', '$senha', $status) ";
 
             $retorno = array();
+            $connect = BD_AbrirConexao();
             $insert = mysqli_query($connect, $insertString);
+            BD_FecharConexao($connect);
             if($insert){
                 $retorno["sucesso"] = true;
                 $retorno["mensagem"] = "Cadastro realizado com sucesso.";
