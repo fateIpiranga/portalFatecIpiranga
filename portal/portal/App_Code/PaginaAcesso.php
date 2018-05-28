@@ -1,58 +1,59 @@
 <?php
 ###################################################################################################################
-//Gilberto Shimokawa Falcão - 01/05/2018
-####################################################################################################################
 /*PÁGINA AECESSO: Gerencia área administrativa
 Ex: Descritivo, Posts, Implementa controle de acesso dos usuários, cadastrar novo usuário, Notícia, etc.*/
+####################################################################################################################
 
 namespace portal\App_Code {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------		
     class PaginaAcesso {
-        private $codigo;//Double
-        private $nome;//String
-        private $descritivo;//String
-        private $pagina;//String
-        private $TipoStatus;//Boolean true - Ativo, false - Inativo.
+        private $codigo;
+        private $nome;
+        private $descritivo;
+        private $pagina;
+        private $TipoStatus; //1 - Ativo, 0 - Inativo.
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public function __construct($DoubleCodigo,$StringNome,$StringDescritivo,$StringPagina,$BooleanTipoStatus){
-			$this -> codigo = $DoubleCodigo;
-			$this -> nome = $StringNome;
-			$this -> descritivo = $StringDescritivo;
-			$this -> pagina = $StringPagina;
-			$this -> TipoStatus = $BooleanTipoStatus;
+		public function __construct (){}
+        
+        public function setPaginaAcesso($codigo,$nome,$descritivo,$pagina,$TipoStatus){
+			$this -> codigo = $codigo;
+			$this -> nome = $nome;
+			$this -> descritivo = $descritivo;
+			$this -> pagina = $pagina;
+			$this -> TipoStatus = $TipoStatus;
 		}
 //SETS-----------------------------------------------------------------------------------------------------------------        
-		public function setCodigo_InDouble ($DoubleCodigo){
-			$this -> codigo = $DoubleCodigo;
+		public function setCodigo($codigo){
+			$this -> codigo = $codigo;
         }
-        public function setNome_InString ($StringNome) {
-			$this -> nome = $StringNome;
+        public function setNome($nome) {
+			$this -> nome = $nome;
         }
-		public function setDescritivo_InString ($StringDescritivo) {
-			$this -> descritivo = $StringDescritivo;
+		public function setDescritivo($descritivo) {
+			$this -> descritivo = $descritivo;
         }
-		Public function setPagina_InString ($StringPagina) {
-			$this -> pagina = $StringPagina;
+		Public function setPagina($pagina) {
+			$this -> pagina = $pagina;
         }
-        public function setTipoStatus_InBool ($BooleanTipoStatus) {
-			$this -> TipoStatus = $BooleanTipoStatus;
+        public function setTipoStatus($TipoStatus) {
+			$this -> TipoStatus = $TipoStatus;
         }
 //GETS-----------------------------------------------------------------------------------------------------------------			
-		public function getCodigo_outDouble (){
+		public function getCodigo(){
 			return $this -> codigo;
         }
-        public function getNome_outString(){
+        public function getNome(){
 			return $this -> nome;
         }
-        public function getDescritivo_outString(){
+        public function getDescritivo(){
 			return $this -> descritivo;
         }	
-        public function getPagina_outString(){
+        public function getPagina(){
 			return $this -> pagina;
         }
-        public function getTipoStatus_outBool () {
+        public function getTipoStatus() {
 			return $this -> TipoStatus;
-        }	
+        }
     }
 }
 

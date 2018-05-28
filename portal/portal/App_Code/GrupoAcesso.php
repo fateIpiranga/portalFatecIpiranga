@@ -1,49 +1,55 @@
 <?php
 ###################################################################################################################
-//Gilberto Shimokawa Falcão - 30/04/2018
-####################################################################################################################
 //GRUPO ACESSO: Trabalha com páginas de acesso bem como composição das mesmas, Cada usuário acessa informações competentes a sua área.
-
+####################################################################################################################
 
 namespace portal\App_Code {
-require_once("PaginaAcesso.php");
+require_once("PaginaAcesso.php"); //pagina_acesso (MySQL)
     class GrupoAcesso {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------		
-        private $codigo;//Double
-        private $nome;//String
-		private $TipoStatus;//Boolean true - Ativo, false - Inativo.
-		private $PaginaAcesso;//OBJ PaginaAcesso.php
+		private $codigo;
+        private $nome;
+		private $TipoStatus;//Inteiro -> 1 - Ativo, 0 - Inativo.
+		private $PaginaAcesso = [];//Lista de objetos PaginaAcesso.php
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public function __construct($DoubleCodigo,$StringNome,$BooleanTipoStatus){
-			$this -> codigo = $DoubleCodigo;
-			$this -> nome = $StringNome;
-			$this -> TipoStatus = $BooleanTipoStatus;
-			$this -> PaginaAcesso = new PaginaAcesso();
+		public function __construct(){}
+		
+		public function setGrupoAcesso($codigo,$nom,$TipoStatus){
+			$this -> codigo = $codigo;
+			$this -> nome = $nom;
+			$this -> TipoStatus = $TipoStatus;
+		}
+		
+		public function setGrupoAcessoComPaginas($codigo,$nom,$TipoStatus,$ListaDepagina){
+			$this -> codigo = $codigo;
+			$this -> nome = $nom;
+			$this -> TipoStatus = $TipoStatus;
+			$this -> PaginaAcesso = $ListaDepagina;
 		}
 //SETS-----------------------------------------------------------------------------------------------------------------        
-		public function setCodigo_InDouble ($DoubleCodigo){
-			$this -> codigo = $DoubleCodigo;
+		public function setCodigo($codigo){
+			$this -> codigo = $codigo;
         }
-        public function setNome_InString ($StringNome) {
-			$this -> nome = $StringNome;
+        public function setNome($nom) {
+			$this -> nome = $nom;
         }
-        public function setTipoStatus_InBool ($BooleanTipoStatus) {
-			$this -> TipoStatus = $BooleanTipoStatus;
+        public function setTipoStatus($TipoStatus) {
+			$this -> TipoStatus = $TipoStatus;
         }
-        public function setPaginaAcesso_OBJ ($OBJPaginaAcesso) {
-			$this -> PaginaAcesso = $OBJPaginaAcesso;
+        public function setListaPaginaAcesso($ListaPaginaAcesso) {
+			$this -> PaginaAcesso = $ListaPaginaAcesso;
         }		
 //GETS-----------------------------------------------------------------------------------------------------------------			
-		public function getCodigo_outDouble (){
+		public function getCodigo (){
 			return $this -> codigo;
         }
-        public function getNome_outString(){
+        public function getNome(){
 			return $this -> nome;
         }
-        public function getTipoStatus_outBool () {
+        public function getTipoStatus() {
 			return $this -> TipoStatus;
         }
-        public function getPaginaAcesso_OBJ () {
+        public function getListaPaginaAcesso() {
 			return $this -> PaginaAcesso;
         }		
     }

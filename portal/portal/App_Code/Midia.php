@@ -1,48 +1,49 @@
 <?php
 ###################################################################################################################
-//Gilberto Shimokawa Falcão - 01/05/2018
-####################################################################################################################
 /*MÍDIA: Gerencia Arquivos que estão feitos Uploads.
 EX: POWER POINT, DOC, EXCEL, PPT, ETC SEAO OS ADMS QUE FAZEM ESSES UPLOADS.*/
+####################################################################################################################
 
 namespace portal\App_Code {
     class Midia {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------				
-        private $codigo;//Double
-        private $nome;//String
-        private $url;//String
-        private $data;//String
+        private $codigo;
+        private $nome;
+        private $url;
+        private $data;
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public function __construct($DoubleCodigo,$StringNome,$StringURL,$StringData){
-			$this -> codigo = $DoubleCodigo;
-			$this -> nome = $StringNome;
-			$this -> url = $StringURL;
-			$this -> data = $StringData;
+		public function __construct (){}
+        
+        public function setMidia($codigo,$nome,$URL,$data){
+			$this -> codigo = $codigo;
+			$this -> nome = $nome;
+			$this -> url = $URL;
+			$this -> data = $data;
 		}
 //SETS-----------------------------------------------------------------------------------------------------------------        
-		public function setCodigo_InDouble ($DoubleCodigo){
-			$this -> codigo = $DoubleCodigo;
+		public function setCodigo($codigo){
+			$this -> codigo = $codigo;
         }
-        public function setNome_InString ($StringNome) {
-			$this -> nome = $StringNome;
+        public function setNome($nome) {
+			$this -> nome = $nome;
         }
-		public function setURL_InString ($StringURL) {
-			$this -> url = $StringURL;
+		public function setURL($URL) {
+			$this -> url = $URL;
         }
-		public function setData_InString ($StringData) {
-			$this -> data = $StringData;
+		public function setData($data) {
+			$this -> data = $data;
         }
 //GETS-----------------------------------------------------------------------------------------------------------------				
-		public function getCodigo_outDouble (){
+		public function getCodigo(){
 			return $this -> codigo;
         }
-        public function getNome_outString () {
+        public function getNome() {
 			return $this -> nome;
         }
-		public function getURL_outString () {
+		public function getURL() {
 			return $this -> url;
         }
-		public function getData_outString () {
+		public function getData() {
 			return $this -> data;
         }	
     }
