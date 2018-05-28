@@ -1,71 +1,72 @@
 <?php
 ###################################################################################################################
-//Gilberto Shimokawa Falcão - 01/05/2018
-####################################################################################################################
 //SLIDES: Apresenta imagens, fotos relacionadas àquela noticia.
+####################################################################################################################
 
 namespace portal\App_Code {
     class Slide {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------	
-        private $codigo;//Double
-        private $imagem;//String
-        private $grupo;//String
-        private $titulo;//String
-        private $mensagem;//String
-        private $url;//String
-        private $TipoStatus;//Boolean true - Ativo, false - Inativo.
+        private $codigo;
+        private $imagem;//string
+        private $titulo;
+        private $mensagem;
+        private $url;
+        private $grupo;
+        private $TipoStatus;// 1 - Ativo, 0 - Inativo.
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public function __construct($DoubleCodigo,$StringImagem,$StringGrupo,$StringTitulo,$StringMensagem,$StringURL,$BooleanTipoStatus){
-			$this -> codigo = $DoubleCodigo;
-			$this -> imagem = $StringImagem;
-			$this -> grupo = $StringGrupo;
-			$this -> titulo = $StringTitulo;
-			$this -> mensagem = $StringMensagem;
-			$this -> url = $StringURL;
-			$this -> TipoStatus = $BooleanTipoStatus;
+		public function __construct (){}
+        
+        public function setSlide($codigo,$img,$titulo,$mensagem,$URL,$grupo,$TipoStatus){
+			$this -> codigo = $codigo;
+			$this -> imagem = $img;
+			$this -> grupo = $grupo;
+			$this -> titulo = $titulo;
+			$this -> mensagem = $mensagem;
+			$this -> url = $URL;
+			$this -> TipoStatus = $TipoStatus;
 		}
 //SETS-----------------------------------------------------------------------------------------------------------------        
-		public function setCodigo_InDouble ($DoubleCodigo){
-			$this -> codigo = $DoubleCodigo;
+		public function setCodigo($codigo){
+			$this -> codigo = $codigo;
         }
-		public function setImagem_InString ($StringImagem){
-			$this -> imagem = $StringImagem;
+		public function setImagem($img){
+			$this -> imagem = $img;
         }
-		public function setGrupo_InString ($StringGrupo){
-			$this -> grupo = $StringGrupo;
+		public function setGrupo($grupo){
+			$this -> grupo = $grupo;
         }
-		public function setTitulo_InString ($StringTitulo){
-			$this -> titulo = $StringTitulo;
+		public function setTitulo($titulo){
+			$this -> titulo = $titulo;
         }
-		public function setMensagem_InString ($StringMensagem){
-			$this -> mensagem = $StringMensagem;
+		public function setMensagem($mensagem){
+			$this -> mensagem = $mensagem;
         }
-		public function setURL_InString ($StringURL) {
-			$this -> url = $StringURL;
+		public function setURL($URL) {
+			$this -> url = $URL;
         }
-		public function setTipoStatus_InBool ($BooleanTipoStatus){
-			$this -> TipoStatus = $BooleanTipoStatus;
+		public function setTipoStatus($TipoStatus){
+			$this -> TipoStatus = $TipoStatus;
 		}
 //GETS-----------------------------------------------------------------------------------------------------------------			
-		public function getCodigo_outDouble (){
+		public function getCodigo(){
 			return $this -> codigo;
         }
-		public function getImagem_outString (){
+		public function getImagem(){
 			return $this -> imagem;
         }
-		public function getGrupo_outString ($StringGrupo){
+		public function getGrupo(){
 			return $this -> grupo;
         }
-		public function getTitulo_outString ($StringTitulo){
+		public function getTitulo(){
 			return $this -> titulo;
         }
-		public function getMensagem_outString ($StringMensagem){
+		public function getMensagem(){
 			return $this -> mensagem;
         }
-		public function getURL_outString () {
+		public function getURL() {
 			return $this -> url;
         }
-        public function getTipoStatus_outBool () {
+        public function getTipoStatus() {
 			return $this -> TipoStatus;
         }
     }

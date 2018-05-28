@@ -1,101 +1,111 @@
 <?php
 ###################################################################################################################
-//Gilberto Shimokawa Falcão - 30/04/2018
-####################################################################################################################
 /*CONTEÚDO: É todo o texto apresentado dentro do SITE, Apresentando conteúdo. Possui diversos formatos, tipos, palavra chaves, chamadas.*/
-
-
+####################################################################################################################
 
 namespace portal\App_Code{
 //INTANCIA DE SEGURANÇA ---------------------------------------------------------------------------------------------
 require_once("Menu.php");
 require_once ("Categoria.php");
-    
 	class Conteudo {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------
-        private $codigo;//Double
-        private $nome;//String
-        private $titulo;//String
-        private $descritivo;//String
-        private $keywords;//String
-		private $tipo;//String (Salva Strings: Destaque, Conteúdo, Notícia, DestaqueHotSite).
-		private $dataPublicado;//String
-		private $TipoStatus;//Boolean true - Ativo, False - Inativo.
+		private $codigo;
+        private $nome;
+        private $titulo;
+        private $descritivo;
+        private $TipoStatus; // 1-Ativo ; 0-Inativo
+        private $keywords;
+		private $tipo;//1- Destaque, 2- Conteúdo, 3- Notícia, 4- DestaqueHotSite).
+		private $dataPublicado;
 		private $menuRelacionado;//Obj Menu.php
-		private $listaCategoria;//Obj Categoria.php
+		private $listaCategoria = [];//Lista de Objeto Categoria.php
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public function __construct($DoubleCodigo,$StringNome,$StringTitulo,$StringDescritivo,$StringKeywords,$StringTipo,$StringDataPublicado,$BoleanTipoStatus, Menu $menuRelacionado, Categoria $category){
-			$this -> codigo = $DoubleCodigo;
-			$this -> nome = $StringNome;
-			$this -> titulo = $StringTitulo;
-			$this -> descritivo = $StringDescritivo;
-			$this -> keywords = $StringKeywords;
-			$this -> tipo = $StringTipo;
-			$this -> dataPublicado = $StringDataPublicado;
-			$this -> TipoStatus = $BoleanTipoStatus;
+		public function __construct(){}
+		
+		public function setConteudoArray($codigo,$nome,$titulo,$descritivo,$TipoStatus,$keywords,$tipo,$data_publicado,Menu $menuRelacionado,$category){
+			$this -> codigo = $codigo;
+			$this -> nome = $nome;
+			$this -> titulo = $titulo;
+			$this -> descritivo = $descritivo;
+			$this -> keywords = $keywords;
+			$this -> tipo = $tipo;
+			$this -> dataPublicado = $data_publicado;
+			$this -> TipoStatus = $TipoStatus;
 			$this -> menuRelacionado = $menuRelacionado;
-			$this-> listaCategoria = $category;
+			$this-> listaCategoria[] = $category;
+		}
+		
+		public function setConteudo($codigo,$nome,$titulo,$descritivo,$TipoStatus,$keywords,$tipo,$data_publicado,$menuRelacionado){
+			$this -> codigo = $codigo;
+			$this -> nome = $nome;
+			$this -> titulo = $titulo;
+			$this -> descritivo = $descritivo;
+			$this -> keywords = $keywords;
+			$this -> tipo = $tipo;
+			$this -> dataPublicado = $data_publicado;
+			$this -> TipoStatus = $TipoStatus;
+			$this -> menuRelacionado = $menuRelacionado;
 		}
 //SETS-----------------------------------------------------------------------------------------------------------------
-		public function setCodigo_InDouble ($DoubleCodigo){
-			$this -> codigo = $DoubleCodigo;
+		public function setCodigo ($codigo){
+			$this -> codigo = $codigo;
 		}
-		public function setNome_InString ($StringNome){
-			$this -> nome = $StringNome;
+		public function setNome ($nome){
+			$this -> nome = $nome;
 		}
-		public function setTitulo_InString ($StringTitulo){
-			$this -> titulo = $StringTitulo;
+		public function setTitulo ($titulo){
+			$this -> titulo = $titulo;
 		}
-		public function setDescritivo_InString ($StringDescritivo){
-			$this -> descritivo = $StringDescritivo;
+		public function setDescritivo ($descritivo){
+			$this -> descritivo = $descritivo;
 		}
-		public function setKeywords_InString ($StringKeywords){
-			$this -> keywords = $StringKeywords;
+		public function setKeywords ($keywords){
+			$this -> keywords = $keywords;
 		}
-		public function setTipo_InSelectedArrayToStringCast ($StringSelectArrayTipo){
-			$this -> tipo = $StringSelectArrayTipo;//Refer. $Tipos Array
+		public function setTipo ($tipo){
+			$this -> tipo = $tipo;//Refer. $Tipos Array
 		}
-		public function setDataPublicado_InString ($StringDataPublicado){
-			$this -> dataPublicado = $StringDataPublicado;//Refer. $Tipos Array
+		public function setDataPublicado ($data_publicado){
+			$this -> dataPublicado = $data_publicado;//Refer. $Tipos Array
 		}
-		public function setTipoStatus_InBool ($BooleanTipoStatus){
+		public function setTipoStatus($TipoStatus){
 			$this -> TipoStatus = $BooleanTipoStatus;
 		}
-		public function setMenuRelacionado_OBJ ($OBJ_menuRelacionado){
-			$this -> menuRelacionado = $OBJ_menuRelacionado;
+		public function setMenuRelacionado ($menuRelacionado){
+			$this -> menuRelacionado = $menuRelacionado;
 		}	
-		public function setListaCategoria_OBJ ($OBJ_listaCategoria){
-			$this -> listaCategoria = $OBJ_listaCategoria;
+		public function setListaCategoria ($category){
+			$this -> listaCategoria = $category;
 		}		
 //GETS-----------------------------------------------------------------------------------------------------------------		
-		Public function getCodigo_outDouble (){
-			return $this -> $codigo;
+		Public function getCodigo (){
+			return $this -> codigo;
 		}
-		public function getNome_outString (){
+		public function getNome(){
 			return $this -> nome;
 		}
-		public function getTitulo_outString (){
+		public function getTitulo(){
 			return $this -> titulo;
 		}
-		public function getDescritivo_outString (){
+		public function getDescritivo (){
 			return $this -> descritivo;
 		}
-		public function getKeywords_outString (){
+		public function getKeywords (){
 			return $this -> keywords;
 		}
-		public function getTipo_outString (){
-			return $this -> tipo;//Refer. $Tipos Array
+		public function getTipo (){
+			return $this -> tipo;
 		}
-		public function getDataPublicado_outString (){
+		public function getDataPublicado (){
 			return $this -> dataPublicado;
 		}
-		public function getTipoStatus_outBool (){
+		public function getTipoStatus (){
 			return $this -> TipoStatus;
 		}
-		public function getMenuRelacionado_OBJ (){
+		public function getMenuRelacionado(){
 			return $this -> menuRelacionado;
 		}	
-		public function getListaCategoria_OBJ (){
+		public function getListaCategoria(){
 			return $this -> listaCategoria;
 		}		
 	}	

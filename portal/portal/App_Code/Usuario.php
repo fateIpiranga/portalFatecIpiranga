@@ -1,67 +1,66 @@
 <?php
 ###################################################################################################################
-//Gilberto Shimokawa Falcão - 01/05/2018
-####################################################################################################################
 //USUÁRIO: Responsável pela área de acesso administrativa.
-
-
+####################################################################################################################
 
 namespace portal\App_Code {
 require_once ("GrupoAcesso.php");
     class Usuario {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------		
-        private $codigo;//Double
-        private $nome;//String
-        private $email;//String
-        private $senha;//String
-		private $TipoStatus;//Boolean true - Ativo, false - Inativo.
-		private $AcessGroup;//OBJ GrupoAcesso
+        private $codigo;
+        private $nome;
+        private $email;
+        private $senha;
+		private $TipoStatus;// 1 - Ativo, 0 - Inativo.
+		private $codigo_grupo_acesso;
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public function __construct($DoubleCodigo,$StringNome,$StringEmail,$StringSenha,$BooleanTipoStatus, GrupoAcesso $acessGroup){
-			$this -> codigo = $DoubleCodigo;
-			$this -> nome = $StringNome;
-			$this -> email = $StringEmail;
-			$this -> senha = $StringSenha;
-			$this -> TipoStatus = $BooleanTipoStatus;
-			$this -> AcessGroup = $acessGroup;
+		public function __construct (){}
+        
+        public function setUsuario($codigo,$nome,$mail,$senha,$tipoStatus,$codigo_grupo_acesso){
+			$this -> codigo = $codigo;
+			$this -> nome = $nome;
+			$this -> email = $mail;
+			$this -> senha = $senha;
+			$this -> TipoStatus = $tipoStatus;
+			$this -> codigo_grupo_acesso = $codigo_grupo_acesso;
 		}			
 //SETS-----------------------------------------------------------------------------------------------------------------        
-		public function setCodigo_InDouble ($DoubleCodigo){
-			$this -> codigo = $DoubleCodigo;
+		public function setCodigo($codigo){
+			$this -> codigo = $codigo;
         }
-		public function setNome_InString ($StringNome){
-			$this -> nome = $StringNome;
+		public function setNome($nome){
+			$this -> nome = $nome;
 		}
-		public function setEmail_InString ($StringEmail){
-			$this -> email = $StringEmail;
+		public function setEmail($mail){
+			$this -> email = $mail;
 		}
-		public function setSenha_InString ($StringSenha){
-			$this -> senha = $StringSenha;
+		public function setSenha($senha){
+			$this -> senha = $senha;
 		}		
-        public function setTipoStatus_InBool ($BooleanTipoStatus) {
-			$this -> TipoStatus = $BooleanTipoStatus;
+        public function setTipoStatus($tipoStatus) {
+			$this -> TipoStatus = $tipoStatus;
         }		
-        public function setGrupoAcesso_OBJ ($OBJ_GrupoAcesso) {
-			$this -> AcessGroup = $OBJ_GrupoAcesso;
+        public function setCodigoGrupoAcesso($codigo_grupo_acesso) {
+			$this -> codigo_grupo_acesso = $codigo_grupo_acesso;
         }
 //GETS-----------------------------------------------------------------------------------------------------------------			
-		public function getCodigo_outDouble (){
+		public function getCodigo(){
 			return $this -> codigo;
         }
-        public function getNome_outString () {
+        public function getNome() {
 			return $this -> nome;
         }
-        public function getEmail_outString () {
+        public function getEmail() {
 			return $this -> email;
         }
-        public function getSenha_outString () {
+        public function getSenha() {
 			return $this -> senha;
         }
-        public function getTipoStatus_outBool () {
+        public function getTipoStatus() {
 			return $this -> TipoStatus;
         }
-        public function getGrupoAcesso_OBJ () {
-			return $this -> AcessGroup;
+        public function getCodigoGrupoAcesso() {
+			return $this -> codigo_grupo_acesso;
         }
     }
 }

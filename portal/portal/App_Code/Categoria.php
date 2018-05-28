@@ -1,40 +1,42 @@
 <?php
-###################################################################################################################
-//Gilberto Shimokawa Falcão - 30/04/2018
 ####################################################################################################################
 /* CATEGORIA: Classifica tipos de conteúdo competente de cada disciplina, "grupos de conteúdo". -> A Página é personalizada para aquele tipo de conteúdo. */
+####################################################################################################################
 
 namespace portal\App_Code {
 	class Categoria {
 		//ATRIBUTES----------------------------------------------------------------------
-			private $codigo;//Double
-			private $descritivo;//String
-			private $nomeTipo;//String
+			//MySQL <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~> IO
+			private $codigo;
+			private $nomeTipo;
+			private $descritivo;
 		//CONSTRUTOR---------------------------------------------------------------------
-			public function  __construct ($DoubleCodigo,$StringDescritivo,$StringNomeTipo){
-				$this -> codigo = $DoubleCodigo;
-				$this -> descritivo= $StringDescritivo;
-				$this -> nomeTipo = $StringNomeTipo;
+			public function __construct(){}
+        
+            public function  setCategoria ($cod,$nomTip,$desc){
+				$this -> codigo = $cod;
+                $this -> nomeTipo = $nomTip;
+				$this -> descritivo= $desc;
 			}
 		//SETS---------------------------------------------------------------------------
-			public function setCodigo_InDouble($DoubleCodigo){
-				$this -> codigo = $DoubleCodigo;
+			public function setCodigo($cod){
+				$this -> codigo = $cod;
 			}
-			public function setDescritivo_InString($StringDescritivo){
-				$this -> descritivo= $StringDescritivo;
-			}
-			public function setNomeTipo_InString($StringNomeTipo){
-				$this -> nomeTipo = $StringNomeTipo;
+			public function setNomeTipo($nomTip){
+				$this -> nomeTipo = $nomTip;
+			}			
+			public function setDescritivo($desc){
+				$this -> descritivo= $desc;
 			}
 		//GETS---------------------------------------------------------------------------
-			public function getCodigo_outDouble(){
+			public function getCodigo(){
 				return $this -> codigo;
 			}
-			public function getDescritivo_outString(){
-				return $this -> descritivo;
-			}
-			public function getNomeTipo_outString(){
+			public function getNomeTipo(){
 				return $this -> nomeTipo;
+			}
+			public function getDescritivo(){
+				return $this -> descritivo;
 			}
 	}
 }
