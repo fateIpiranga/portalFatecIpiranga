@@ -1,63 +1,64 @@
 <?php
 ###################################################################################################################
-//Gilberto Shimokawa Falcão - 01/05/2018
-####################################################################################################################
 //LOG OPERAÇÃO: Guarda LOGS do sistema (Ações feitas por usuários).
+####################################################################################################################
 
 namespace portal\App_Code {
     class LogOperacao {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------		
-        private $codigo;//Double
+        private $codigo;
         private $tabela;//String
-        private $codigoChave;//Double
-        private $codigoUsuario;//Double
+        private $codigoChave;
+        private $codigoUsuario;
         private $data;//String
-        private $tipoOperacao;//String (Inserir, Excluir, Alterar) <~ Operações do banco de dados.
+        private $tipoOperacao;//(1-Inserir, 2-Excluir, 3-Alterar) 
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public function __construct ($DoubleCodigo,$StringTable,$DoubleCodigoChave,$DoubleCodigoUsuario,$StringData,$StringTipoOperacao){
-			$this -> codigo = $DoubleCodigo;
-			$this -> tabela = $StringTable;
-			$this -> codigoChave = $DoubleCodigoChave;
-			$this -> codigoUsuario = $DoubleCodigoUsuario;
-			$this -> data = $StringData;
-			$this -> tipoOperacao = $StringTipoOperacao;			
+		public function __construct (){}
+        
+        public function setLogOperacao($codigo,$tabela,$codigoChave,$codigoUsuario,$data,$tipoOperacao){
+			$this -> codigo = $codigo;
+			$this -> tabela = $tabela;
+			$this -> codigoChave = $codigoChave;
+			$this -> codigoUsuario = $codigoUsuario;
+			$this -> data = $data;
+			$this -> tipoOperacao = $tipoOperacao;			
 		}
 //SETS-----------------------------------------------------------------------------------------------------------------
-		Public function setCodigo_InDouble ($DoubleCodigo){
-			$this -> codigo = $DoubleCodigo;
+		Public function setCodigo ($codigo){
+			$this -> codigo = $codigo;
 		}
-		Public function setTabela_InString ($StringTable){
-			$this -> tabela = $StringTable;
+		Public function setTabela($tabela){
+			$this -> tabela = $tabela;
 		}
-		Public function setCodigoChave_InDouble ($DoubleCodigoChave){
-			$this -> codigoChave = $DoubleCodigoChave;
+		Public function setCodigoChave($codigoChave){
+			$this -> codigoChave = $codigoChave;
 		}
-		Public function setCodigoUsuario_InDouble ($DoubleCodigoUsuario){
-			$this -> codigoUsuario= $DoubleCodigoUsuario;
+		Public function setCodigoUsuario($codigoUsuario){
+			$this -> codigoUsuario= $codigoUsuario;
 		}
-		Public function setData_InString ($StringData){
-			$this -> data= $StringData;
+		Public function setData ($data){
+			$this -> data= $data;
 		}	
-		Public function setTipoOperacao_InString ($StringTipoOperacao){
-			$this -> tipoOperacao = $StringTipoOperacao;
+		Public function setTipoOperacao($tipoOperacao){
+			$this -> tipoOperacao = $tipoOperacao;
 		}		
 //GETS-----------------------------------------------------------------------------------------------------------------			
-    	Public function getCodigo_outDouble (){
+    	Public function getCodigo(){
 			return $this -> codigo;
 		}
-		Public function getTabela_outString (){
+		Public function getTabela(){
 			return $this -> tabela;
 		}
-		Public function getCodigoChave_outDouble (){
+		Public function getCodigoChave(){
 			return $this -> codigoChave;
 		}
-		Public function getCodigoUsuario_outDouble (){
+		Public function getCodigoUsuario(){
 			return $this -> codigoUsuario;
 		}
-		Public function getData_outString (){
+		Public function getData(){
 			return $this -> data;
 		}	
-		Public function getTipoOperacao_outString (){
+		Public function getTipoOperacao(){
 			return $this -> tipoOperacao;
 		}
 	}

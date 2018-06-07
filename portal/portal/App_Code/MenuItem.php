@@ -1,62 +1,64 @@
 <?php
 ###################################################################################################################
-//Gilberto Shimokawa Falcão - 01/05/2018
+//Compõe o menu, são os links
 ####################################################################################################################
-//Compõe o menu, são os links 
+ 
 namespace portal\App_Code {
     class MenuItem {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------		
-        private $codigo;//Double
-        private $codigoMenu;//Double
-        private $codigoItemPai;//Double
-        private $codigoConteudo;//Double
-        private $nome;//String
-        private $url;//String
+        private $codigo;
+        private $codigoMenu;
+        private $codigoItemPai;
+		private $nome;
+        private $codigoConteudo;
+        private $url;
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public function __construct($DoubleCodigo,$DoubleCodigoMenu,$DoubleCodigoItemPai,$DoubleCodigoConteudo,$StringNome,$StringURL){
-			$this -> codigo = $DoubleCodigo;
-			$this -> codigoMenu = $DoubleCodigoMenu;
-			$this -> codigoItemPai = $DoubleCodigoItemPai;
-			$this -> codigoConteudo = $DoubleCodigoConteudo;
-			$this -> nome = $StringNome;
-			$this -> url = $StringURL;
+		public function __construct (){}
+        
+        public function setMenuItem($codigo,$codigoMenu,$codigoItemPai,$nome,$codigoConteudo,$url){
+			$this -> codigo = $codigo;
+			$this -> codigoMenu = $codigoMenu;
+			$this -> codigoItemPai = $codigoItemPai;
+			$this -> codigoConteudo = $codigoConteudo;
+			$this -> nome = $nome;
+			$this -> url = $url;
 		}
 //SETS-----------------------------------------------------------------------------------------------------------------        
-		public function setCodigo_InDouble ($DoubleCodigo){
-			$this -> codigo = $DoubleCodigo;
+		public function setCodigo ($codigo){
+			$this -> codigo = $codigo;
         }
-		public function setCodigoMenu_InDouble ($DoubleCodigoMenu){
-			$this -> codigoMenu = $DoubleCodigoMenu;
+		public function setCodigoMenu($codigoMenu){
+			$this -> codigoMenu = $codigoMenu;
         }
-		public function setCodigoItemPai_InDouble ($DoubleCodigoItemPai){
-			$this -> codigoItemPai = $DoubleCodigoItemPai;
+		public function setCodigoItemPai($codigoItemPai){
+			$this -> codigoItemPai = $codigoItemPai;
         }
-		public function setCodigoConteudo_InDouble ($DoubleCodigoConteudo){
-			$this -> codigoConteudo = $DoubleCodigoConteudo;
+		public function setCodigoConteudo($codigoConteudo){
+			$this -> codigoConteudo = $codigoConteudo;
         }
-        public function setNome_InString ($StringNome) {
-			$this -> nome = $StringNome;
+        public function setNome($nome){
+			$this -> nome = $nome;
         }
-		public function setURL_InString ($StringURL) {
-			$this -> url = $StringURL;
+		public function setURL($url){
+			$this -> url = $url;
         }
 //GETS-----------------------------------------------------------------------------------------------------------------		
-		public function getCodigo_outDouble ($DoubleCodigo){
+		public function getCodigo(){
 			return $this -> codigo;
         }
-		public function getCodigoMenu_outDouble ($DoubleCodigoMenu){
+		public function getCodigoMenu(){
 			return $this -> codigoMenu;
         }
-		public function getCodigoItemPai_outDouble ($DoubleCodigoItemPai){
+		public function getCodigoItemPai(){
 			return $this -> codigoItemPai;
         }
-		public function getCodigoConteudo_outDouble ($DoubleCodigoConteudo){
+		public function getCodigoConteudo(){
 			return $this -> codigoConteudo;
         }
-        public function getNome_outString ($StringNome) {
+        public function getNome(){
 			return $this -> nome;
         }
-		public function getURL_outString ($StringURL) {
+		public function getURL() {
 			return $this -> url;
         }
     }

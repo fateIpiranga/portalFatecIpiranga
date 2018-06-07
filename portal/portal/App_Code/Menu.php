@@ -1,58 +1,65 @@
 <?php
 ###################################################################################################################
-//Gilberto Shimokawa Falcão - 05/05/2018
+//CADASTROS DE MENUS (menu arvore).
 ####################################################################################################################
 
-
 namespace portal\App_Code {
-//CADASTROS DE MENUS (menu arvore).
 require_once("MenuItem.php");
     
     class Menu {
 //ATRIBUTOS----------------------------------------------------------------------------------------------------------
-        private $codigo;//Double
-        private $nome;//String
-        private $TipoStatus;//Boolean true - Ativo, false - Inativo.
-		private $Tipos;//String: Principal, MenuLateral, HotSite
+        private $codigo;
+        private $nome;
+        private $Tipos;// 1-  Principal, 2- MenuLateral, 3- HotSite
+        private $TipoStatus;// 1 - Ativo, 0 - Inativo.
 		private $items = [];//Lista de Objeto MenuItem
 //CONSTRUTOR----------------------------------------------------------------------------------------------------------			
-		public function __construct($DoubleCodigo,$StringNome,$BooleanTipoStatus,$StringTipos){
-			$this -> codigo = $DoubleCodigo;
-			$this -> nome = $StringNome;
-			$this -> TipoStatus = $BooleanTipoStatus;
-			$this -> Tipos = $StringTipos;
-			$this -> items [] = new MenuItem();
+		public function __construct(){}
+
+        public function setMenu($codigo,$nome,$TipoStatus,$tipos){
+			$this -> codigo = $codigo;
+			$this -> nome = $nome;
+			$this -> TipoStatus = $TipoStatus;
+			$this -> Tipos = $tipos;
+		}        
+
+        public function setMenuComLista($codigo,$nome,$TipoStatus,$tipos,$menuItem){
+			$this -> codigo = $codigo;
+			$this -> nome = $nome;
+			$this -> TipoStatus = $TipoStatus;
+			$this -> Tipos = $tipos;
+			$this -> items= (array)$menuItem;
 		}
 //SETS-----------------------------------------------------------------------------------------------------------------        
-		public function setCodigo_InDouble ($DoubleCodigo){
-			$this -> codigo = $DoubleCodigo;
+		public function setCodigo($codigo){
+			$this -> codigo = $codigo;
         }
-        public function setNome_InString ($StringNome) {
-			$this -> nome = $StringNome;
+        public function setNome($nome) {
+			$this -> nome = $nome;
         }
-        public function setTipoStatus_InBool ($BooleanTipoStatus) {
-			$this -> TipoStatus = $BooleanTipoStatus;
+        public function setTipoStatus($TipoStatus) {
+			$this -> TipoStatus = $TipoStatus;
         }
-        public function setTipos_InString ($StringTipos) {
-			$this -> Tipos = $StringTipos;
+        public function setTipos($tipos) {
+			$this -> Tipos = $tipos;
         }
-        public function setItems_OBJ ($OBJ_MenuItem) {
-			$this -> items [] = $OBJ_MenuItem;
+        public function setItems($MenuItem) {
+			$this -> items[] = (array)$MenuItem;
         }
 //GETS-----------------------------------------------------------------------------------------------------------------			
-		public function getCodigo_outDouble (){
+		public function getCodigo(){
 			return $this -> codigo;
         }
-        public function getNome_outString(){
+        public function getNome(){
 			return $this -> nome;
         }
-        public function getTipoStatus_outBool () {
+        public function getTipoStatus() {
 			return $this -> TipoStatus;
         }
-        public function getTipos_outSting () {
+        public function getTipos() {
 			return $this -> Tipos;
         }		
-        public function getItems_OBJ () {
+        public function getItems() {
 			return $this -> items;
         }		
     }
