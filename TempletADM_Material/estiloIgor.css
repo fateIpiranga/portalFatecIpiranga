@@ -1,0 +1,36 @@
+.CLTMUGS  {
+    width: 10% !important;
+    margin-top: 5px;
+}
+.inputCLTMUGS{
+	float: right;	
+	width: 90%;
+	padding-left: 10px;
+	border: 2px solid #959798;
+    border-radius: 5px;
+}
+#lblCodigo{
+	float: left;	
+	width: 10%;
+}
+#codigo{
+	width: 25%;
+	padding-left: 10px;
+	border: 2px solid #959798;
+    border-radius: 5px;
+}{
+#btnPesquisar{
+	float: right;
+}
+input[type=submit]{
+	background-color: #4CAF50 !important; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
